@@ -38,4 +38,7 @@ public interface AvisoRepository extends JpaRepository <AvisoEstudiante, Long> {
   "INNER JOIN estudiante AS e ON e.no_de_control = aei.id_estudiante "+
   "WHERE date(ae.fecha_caducidad)  > now() AND e.no_de_control=?1 ", nativeQuery = true)
   List<AvisoEstudianteDTO> buscarAvisosVigentesPorAlumno(String noDeControl);
+
+
+
 }

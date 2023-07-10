@@ -1,5 +1,7 @@
 package com.backendserviciosescolares.springboot.controller;
 
+import com.backendserviciosescolares.springboot.dto.AvisoEstudianteDTO;
+import com.backendserviciosescolares.springboot.dto.FichaAspiranteDTO;
 import com.backendserviciosescolares.springboot.entity.Aspirante;
 import com.backendserviciosescolares.springboot.service.AspiranteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +25,11 @@ public class AspiranteController {
   @GetMapping(value = "/aspirantes/{curp}")
   public Aspirante obtenerAspirantePorCurp(@PathVariable String curp){
     return aspiranteService.obtenerAspirantePorCurp(curp);
+  }
+
+  @GetMapping("/generar/ficha/{curp}")
+  public List<FichaAspiranteDTO> buscarDatosFichaAspirante(@PathVariable String curp) {
+    //System.out.println(noDeControl);
+    return aspiranteService.buscarDatosFichaAspirante(curp);
   }
 }

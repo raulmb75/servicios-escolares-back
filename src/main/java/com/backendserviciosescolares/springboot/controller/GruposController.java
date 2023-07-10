@@ -23,4 +23,10 @@ public class GruposController {
   public List<Grupos> buscarGruposPorCarrera(@PathVariable Integer reticula){
     return gruposService.buscarGruposPorCarrera(reticula);
   }
+
+  @GetMapping(value = "/carrera/periodo/{reticula}/{periodo}")
+  public List<Grupos> buscarGruposPorCarreraYperiodo(@PathVariable Integer reticula, String periodo){
+      return gruposService.buscarGruposPorCarreraYperiodo(reticula, periodo);
+    }
+
 }

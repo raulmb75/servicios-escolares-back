@@ -17,4 +17,8 @@ public class GruposService {
   public List<Grupos> buscarGruposPorCarrera(Integer reticula){
     return gruposRepository.buscarGruposPorCarrera(reticula);
   }
+
+  public List<Grupos> buscarGruposPorCarreraYperiodo(Integer reticula, String periodo){
+    return gruposRepository.buscarGruposPorCarreraYperiodo(reticula,periodo);
+  }
 }

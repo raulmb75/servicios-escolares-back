@@ -1,5 +1,6 @@
 package com.backendserviciosescolares.springboot.service;
 
+import com.backendserviciosescolares.springboot.dto.FichaAspiranteDTO;
 import com.backendserviciosescolares.springboot.entity.Aspirante;
 import com.backendserviciosescolares.springboot.repository.AspiranteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,9 @@ public class AspiranteService {
 
   public Aspirante obtenerAspirantePorCurp(String curp){
     return aspiranteRepository.findByCurp(curp);
+  }
+
+  public List<FichaAspiranteDTO> buscarDatosFichaAspirante(String curp){
+    return aspiranteRepository.buscarDatosFichaAspirante(curp);
   }
 }
