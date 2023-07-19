@@ -140,6 +140,11 @@ public class EstudianteController {
     return estudianteService.buscarEstudiantesPorCarrera(reticula);
   }
 
+  @GetMapping(value = "/periodo/{periodo}")
+  public List<Estudiante> mostrarEstudiantesPorPeriodo(@PathVariable String periodo){
+    return estudianteService.buscarEstudiantesPorPeriodo(periodo);
+  }
+
   @GetMapping(value = "/nombre/nip/{noDeControl}")
   public Estudiante mostrarNombreYNip(@PathVariable String noDeControl){
     return estudianteService.mostrarNipYNombre(noDeControl);

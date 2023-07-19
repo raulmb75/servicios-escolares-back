@@ -1,0 +1,29 @@
+package com.backendserviciosescolares.springboot.dto;
+
+public interface FichaAspiranteDTO {
+  Long getNoSolicitud();
+
+  String getNombreAspirante();
+
+  String getApellidoPaterno();
+
+  String getApellidoMaterno();
+
+ String getColoniaAspirante();
+
+ String getCodigoPostal();
+
+ String getEntidadFederativa();
+
+ String getMunicipio();
+
+ String getClavePreparatoria();
+
+ String getEntidadFederativaPrepa();
+
+ String getCarreraOp1();
+ String getCarreraOp2();
+
+
+
+}

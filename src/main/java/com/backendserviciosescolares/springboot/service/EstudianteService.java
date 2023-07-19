@@ -53,6 +53,10 @@ public class EstudianteService {
     return estudianteRepository.findByNoDeControl(noDeControl);
   }
 
+  public List<Estudiante> buscarEstudiantesPorPeriodo(String periodo){
+    return estudianteRepository.buscarEstudiantesPorPeriodo(periodo);
+  }
+
   public List<AlumnosInscritosDTO> buscarAlumnosInscritos(Integer reticula, String periodo){
     return estudianteRepository.buscarEstudiantesInscritos(reticula,periodo);
   }

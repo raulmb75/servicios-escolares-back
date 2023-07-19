@@ -22,6 +22,9 @@ public interface EstudianteRepository extends JpaRepository <Estudiante, String>
   @Query("FROM Estudiante e WHERE e.reticula.reticula = ?1")
   List<Estudiante> buscarEstudiantesPorCarrera(Integer reticula);
 
+  @Query("FROM Estudiante e WHERE e.periodoIngresoIt.periodo = ?1")
+  List<Estudiante> buscarEstudiantesPorPeriodo(String periodo);
+
 
   //buscar estudiantes inscritos por carrera y periodo en orden alfabetico
   //List<Estudiante> findByReticulaAndPeriodo(String degree, String enrollmentPeriod);
